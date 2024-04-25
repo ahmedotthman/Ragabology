@@ -29,9 +29,6 @@ jobs:
     - name: Install npm dependencies
       run: npm install
 
-    - name: Rebuild native modules
-      run: npm run rebuild
-
     - name: Package Electron app for Windows
       run: npx electron-packager . --overwrite --platform=win32 --arch=x64 --out=dist/ --prune=true --icon=assets\icon.ico
 
